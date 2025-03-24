@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>입력양식 태그</title>  <!-- 웹 페이지의 제목 -->
+    </head>
+    <body>
+        <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" value="Suan" size="20">
+            <select name="food" id="food"> <!--뒤에 multiple만 넣어주면 다중선택 가능-->
+                <optgroup label="음식">
+                    <option value="pizza">피자</option>
+                    <option value="hamburger">햄버거</option>
+                    <option value="pasta">파스타</option>
+                </optgroup>
+                <optgroup label="후식">
+                    <option value="cola">콜라</option>
+                    <option value="coffee">커피</option>
+                    <option value="icecream">아이스크림</option>
+                </optgroup>
+            </select>
+            <br/>
+            <textarea name="article" rows="20", cols="30">텍스트</textarea>
+        
+            <button>Button</button>
+
+            <fieldset>
+                <legend>개인정보</legend>
+                <label for="name">이름 : </label><br/>
+                <input type="text" id="name" name="name" value="suan"> <br/>
+                <label for="affiliation">소속 : </label><br/>
+                <input type="text" id="affiliation" name="affiliation" value="SuanLab"> <br/><br/>
+                <input type="submit" value="전송">
+            </fieldset>
+            
+            <!-- 자동완성으로 list가 뜨게하는.. -->
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefod"></option>
+                <option value="Internet Explorer"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+        </form>
+        <!-- 
+        GET방식 : url 뒷부분에 파라미터를 추가하여 데이터 전달
+                url에 데이터가 노출되므로, 보안에 취약 
+        
+        POST방식 : HTTP Request 헤더에 파라미터를 추가하여 데이터 전달
+                표면상에 전송데이터가 보이지 않으므로 보안에 좋음(로그인에 사용)        
+        -->
+        
+        <form oninput="r.value=parseInt(x.value)*parseInt(y.value)">
+            <input type="number" id="x" name="x" value="10">
+            X
+            <input type="number" id="y" name="y" value="20">
+            =
+            <output name="r" for="x y"></output>
+            <br/> <br/>
+            <input type="submit">
+        </form>
+
+    </body>
+</html>
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>입력형식</title>  <!-- 웹 페이지의 제목 -->
+    </head>
+    <body>
+        <form>
+            <input type="text" name="text" size="20" placeholder="이름">
+            <input type="password" name="password" required>
+            <input type="button" value="Button">
+            <input type="radio" name="gender" value="male">남자
+            <input type="radio" name="gender" value="female">여자<br/>
+            <!-- checkbox는 다중선택 가능 -->
+            <input type="checkbox" name="food" value="pizza">피자<br/>
+            <input type="checkbox" name="food" value="hamburger">햄버거<br/>
+            <input type="checkbox" name="food" value="pasta">파스타<br/>
+
+            <input type="date" name="date" min="2020-01-01" max="2020-12-31">
+
+            <input type="month" id="month" name="month">
+
+            <input type="week" id="week" name="week">
+
+            <input type="time" id="time" name="time">
+
+            <input type="datetime-local" id="datetime" name="datetime">
+
+            <br/>
+
+            <input type="color" name="color">
+
+            <input type="number" name="number" min="0" max="1000">
+
+            <input type="range" name="point" min="0" max="100">
+
+            <input type="email" name="email">
+
+            <input type="url" name="myurl">
+
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+        
+            <input type="file" id="myfile" name="myfile">
+
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+
+            <!-- 
+            
+            [class 속성]
+            -여러 태그들을 하나의 그룹으로 그룹핑
+            -태그에 class="클래스명" 으로 지정
+            -.클래스이름 으로 선택
+
+            [id 속성]
+            -하나의 태그에 고유 id 부여
+            -태그에 id="고유id값" 으로 지정
+            -#id값 으로 선택
+            
+            -->
+        </form>
+    </body>
+</html>
+
